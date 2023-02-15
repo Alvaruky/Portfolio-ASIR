@@ -3,20 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>PAR</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
     <header>
         <nav>
-            <img src="assets/img/logo.png" alt="Logo-Salesianos" class="logo">
+            <img src="../assets/img/logo.png" alt="Logo-Salesianos" class="logo">
             <a href="https://www.centrodonbosco.es/" target="_blank"> Web </a>
             <a href="https://www.centrodonbosco.es/estudios/asir" target="_blank">ASIR</a>
             <!--<a href="mailto:alvarofernandezg@centrodonbosco.es?subject=Solicitud de información">Contáctanos</a>-->
-            <a href="index.html">Inicio</a>
+            <a href="../index.html">Inicio</a>
         </nav>
     </header>
+
     <main>
         <h1> Planificaci&oacute;n y Administraci&oacute;n de Redes </h1>
     </main>
+    <section>
+    <h1 class="evaluaciones"><u>2ª Evaluaci&oacute;n</u></h1>
+
+    <h2><u>Autenticaci&oacute;n mediante usuarios y contraseñas</u></h2>
+
+    <p>
+        Para realizar la autenticaci&oacute;n de usuarios y contraseñas deberemos de crear los usuarios &quot;Bart&quot;
+        y &quot;lisa&quot;, para ello deberemos de meternos en vlan en el switch.
+        <br>
+        IOS ofrefrece la posibilidad de autenticaci&oacute;n por usuario, donde cada uno de ellos dispondr&aacute; de sus propias credenciales, eliminando de esta manera
+        la contraseña compartida.
+        <br><br><br>
+        <u><strong>Configuraci&oacute;n de la Autenticaci&oacute;n &#40;2 t&eacute;cnicas&#41;&#58;</strong></u>
+        <br><br>
+        Local &#40;a trav&eacute;s de servidores AAA&#41;&#58;
+        <br><br>
+        El switch genera una base de datos en el propio dispositivo que almacena tanto los usuarios como las contraseñas definidas. Para realizar la configuraci&oacute;n
+        primero de todo deberemos de crear los usuarios necesarios mediante la ejecuci&oacute;n del comando &#34;<em>username &#91;nombreUsuario&#93; password</em>&#34;
+    </p>
+    <p>
+        <!-- Solucionar creo que el margin de las etiquetas <p> para las sub-páginas de las asignaturas-->
+    </p>
+    </section>
 </body>
 </html>
+
+<!--
+                    secret [contraseñaUsuario]"
+
+					La principal diferencia es que no lo guarda cifrado y el otro en texto plano.
+
+				Habilitar la autenticación sobre la conexión de consola y si fuese necesario desde remoto (líneas vty) aplicando el comando "login local".
+
+	Crear a bart y lisa:
+
+		SW1(config)# username bart secret bart
+
+		SW1(config)# username lisa secret lisa
+
+		SW1(config)# line console 0
+
+		SW1(config-line)# login local
+
+		SW1(config-line)# exit
+
+		SW1(config)# line vty 0 3
+
+		SW1(config-line)# login local
+
+		SW1(config-line)# exit
+
+	Acceso por telnet en un SW de Cisco:
+
+		Lo primero de todo deberemos de tener creado uno o varios usuarios en el SW, mediante autenticación local o mediante servidores AAA.
+
+		IMPORTANTE! -> 	Para poder establecer una conexión via remoto resulta imprescindible que el SW tenga configurada una dirección IP -> Esta IP va a ser utilizada
+
+					para temas de administración nuca para tareas de capa 3.
+-->
