@@ -37,6 +37,33 @@
         <br><br>
         El switch genera una base de datos en el propio dispositivo que almacena tanto los usuarios como las contraseñas definidas. Para realizar la configuraci&oacute;n
         primero de todo deberemos de crear los usuarios necesarios mediante la ejecuci&oacute;n del comando &#34;<em>username &#91;nombreUsuario&#93; password</em>&#34;
+        y luego de ello debe de crear la contraseña ejecutando el comando &#34;<em>secret &#91;contraseñaUsuario&#93;</em>&#34;. La principal diferencia es que lo guarda
+        cifrado y el otro lo guarda en texto plano. Debemos de habilitar la autenticaci&oacute;n sobre la conexi&oacute;n de consola y, en caso de que fuese necesario
+        desde remoto &#34;<em>l&iacute;neas vty</em>&#34; ejecutando el comando &quot;<em>login local</em>&quot;.
+        <br>
+        Aqu&iacute; podr&acute;s encontrar un ejemplo de como crear ambos usuarios&#58;
+        <br><br>
+        <em>SW1&#40;config&#41;&#35; username bart secret bart</em>
+        <br>
+		<em>SW1&#40;config&#41;&#35; username lisa secret lisa</em>
+        <br>
+		<em>SW1&#40;config&#41;&#35; line console 0</em>
+        <br>
+		<em>SW1&#40;config&#45;line&#41;&#35; login local</em>
+        <br>
+		<em>SW1&#40;config&#45;line&#41;&#35; exit</em>
+        <br>
+		<em>SW1&#40;config&#41;&#35; line vty 0 3</em>
+        <br>
+		<em>SW1&#40;config&#45;line&#41;&#35; login local</em>
+        <br>
+		<em>SW1&#40;config&#45;line&#41;&#35; exit</em>
+        <br><br><br>
+        <u><strong>Acceso por telnet a un switch de Cisco</strong></u>
+        <br><br>
+        Lo primero de todo deberemos de tener creado uno o varios usuarios en el switch, mediante autenticaci&oacute;n local o mediante servidores AAA. Muy <u>importante</u>,
+        para poder establecer una conexi&oacute;n via remoto resulta imprescindible que el switch tenga configurada una direcci&oacute;n IP, dicha IP ser&aacute; utilizada
+        para temas de administraci&oacute;n, nunca para tareas de la capa 3.
     </p>
     <p>
         <!-- Solucionar creo que el margin de las etiquetas <p> para las sub-páginas de las asignaturas-->
@@ -44,37 +71,3 @@
     </section>
 </body>
 </html>
-
-<!--
-                    secret [contraseñaUsuario]"
-
-					La principal diferencia es que no lo guarda cifrado y el otro en texto plano.
-
-				Habilitar la autenticación sobre la conexión de consola y si fuese necesario desde remoto (líneas vty) aplicando el comando "login local".
-
-	Crear a bart y lisa:
-
-		SW1(config)# username bart secret bart
-
-		SW1(config)# username lisa secret lisa
-
-		SW1(config)# line console 0
-
-		SW1(config-line)# login local
-
-		SW1(config-line)# exit
-
-		SW1(config)# line vty 0 3
-
-		SW1(config-line)# login local
-
-		SW1(config-line)# exit
-
-	Acceso por telnet en un SW de Cisco:
-
-		Lo primero de todo deberemos de tener creado uno o varios usuarios en el SW, mediante autenticación local o mediante servidores AAA.
-
-		IMPORTANTE! -> 	Para poder establecer una conexión via remoto resulta imprescindible que el SW tenga configurada una dirección IP -> Esta IP va a ser utilizada
-
-					para temas de administración nuca para tareas de capa 3.
--->
