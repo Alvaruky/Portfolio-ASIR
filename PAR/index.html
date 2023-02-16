@@ -82,6 +82,8 @@
         3&#45; Configurar la interfaz virtual a el switch.
         <br>
             3.1.&#45; <em>SW&#40;config&#41;&#35; interface vlan1</em> &#40;Seleccionamos la vlan con la que vamos a trabajar&#41;.
+        <br>
+            3.2.&#45; <em>SW&#40;config&#45;if&#41;&#35; ip address &#91;InterfazVirtual&#93;&#91;MASK&#93;</em> Ip address 10.0.2.100 con su m&aacute;scara 255.0.0.0.
     </p>
     <p>
         <!-- Solucionar creo que el margin de las etiquetas <p> para las sub-páginas de las asignaturas-->
@@ -90,11 +92,6 @@
 </body>
 </html>
 <!--
-							SW(config)# interface vlan1 -> Seleccionamos la vlan con la que vamos a trabajar.
-						
-							SW(config-if)# ip address [InterfazVirtual][MASK]
-								Ip address 10.0.2.100 255.0.0.0
-								
 						4- El último paso a realizar es subir dicha vlan ya que por defecto se encuentra bajada/apagada.
 						
 							Para ello realizaremos la negación del comando shutdown.
