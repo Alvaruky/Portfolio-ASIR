@@ -66,3 +66,8 @@ nav {
     background-color: hsla(0, 100%, 31%, 0);
     color: rgb(0, 0, 0);
   }
+
+.markPAR{
+  background-color: rgb(199, 45, 45);
+  color:rgb(255, 255, 255)
+}
