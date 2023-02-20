@@ -40,28 +40,28 @@
             Local &#40;a trav&eacute;s de servidores AAA&#41;&#58;
         <br><br>
             El switch genera una base de datos en el propio dispositivo que almacena tanto los usuarios como las contraseñas definidas. Para realizar la configuraci&oacute;n
-            primero de todo deberemos de crear los usuarios necesarios mediante la ejecuci&oacute;n del comando &#34;<em>username &#91;nombreUsuario&#93; password</em>&#34;
-            y luego de ello debe de crear la contraseña ejecutando el comando &#34;<em>secret &#91;contraseñaUsuario&#93;</em>&#34;. La principal diferencia es que lo guarda
+            primero de todo deberemos de crear los usuarios necesarios mediante la ejecuci&oacute;n del comando &#34;<em class="resaltado">username &#91;nombreUsuario&#93; password</em>&#34;
+            y luego de ello debe de crear la contraseña ejecutando el comando &#34;<em class="resaltado">secret &#91;contraseñaUsuario&#93;</em>&#34;. La principal diferencia es que lo guarda
             cifrado y el otro lo guarda en texto plano. Debemos de habilitar la autenticaci&oacute;n sobre la conexi&oacute;n de consola y, en caso de que fuese necesario
-            desde remoto &#34;<em>l&iacute;neas vty</em>&#34; ejecutando el comando &quot;<em>login local</em>&quot;.
+            desde remoto &#34;<em class="resaltado">l&iacute;neas vty</em>&#34; ejecutando el comando &quot;<em class="resaltado">login local</em>&quot;.
         <br><br>
             Aqu&iacute; podr&aacute;s encontrar un ejemplo de como crear ambos usuarios&#58;
         <br><br>
-            1&#45; <em><mark class="markPAR">SW1&#40;config&#41;&#35; username bart secret bart</mark></em>
+            1&#45; <em class="resaltado">SW1&#40;config&#41;&#35; username bart secret bart</em>
         <br>
-            2&#45; <em><mark class="markPAR">SW1&#40;config&#41;&#35; username lisa secret lisa</mark></em>
+            2&#45; <em class="resaltado">SW1&#40;config&#41;&#35; username lisa secret lisa</em>
         <br>
-            3&#45; <em><mark class="markPAR">SW1&#40;config&#41;&#35; line console 0</mark></em>
+            3&#45; <em class="resaltado">SW1&#40;config&#41;&#35; line console 0</em>
         <br>
-            4&#45; <em><mark class="markPAR">SW1&#40;config&#45;line&#41;&#35; login local</mark></em>
+            4&#45; <em class="resaltado">SW1&#40;config&#45;line&#41;&#35; login local</em>
         <br>
-            4&#45; <em><mark class="markPAR">SW1&#40;config&#45;line&#41;&#35; exit</mark></em>
+            4&#45; <em class="resaltado">SW1&#40;config&#45;line&#41;&#35; exit</em>
         <br>
-            5&#45; <em><mark class="markPAR">SW1&#40;config&#41;&#35; line vty 0 3</mark></em>
+            5&#45; <em class="resaltado">SW1&#40;config&#41;&#35; line vty 0 3</em>
         <br>
-            6&#45; <em><mark class="markPAR">SW1&#40;config&#45;line&#41;&#35; login local</mark></em>
+            6&#45; <em class="resaltado">SW1&#40;config&#45;line&#41;&#35; login local</em>
         <br>
-            7&#45; <em><mark class="markPAR">SW1&#40;config&#45;line&#41;&#35; exit</mark></em>
+            7&#45; <em class="resaltado">SW1&#40;config&#45;line&#41;&#35; exit</em>
         <br><br><br>
             <u><strong>Acceso por telnet a un switch de Cisco</strong></u>
         <br><br>
@@ -79,27 +79,24 @@
         <br>
             2&#45; Deberemos de comprobar la vlan por defecto en el switch.
         <br>
-            2.1.&#45; <em><mark class="markPAR">&#35; show vlan</mark></em> &#40;Muestra el conjunto de vlan utilizas y las interfaces asociadas a cada vlan&#41;.
+            2.1.&#45; <em class="resaltado">&#35; show vlan</em> &#40;Muestra el conjunto de vlan utilizas y las interfaces asociadas a cada vlan&#41;.
         <br>
-            2.2.&#45; <em><mark class="markPAR">SW1&#35; show vlan brief</mark></em> &#40;Mismo que el anterior sólo que mostrar&aacute; un resumen de vlans&#41;.
+            2.2.&#45; <em class="resaltado">SW1&#35; show vlan brief</em> &#40;Mismo que el anterior sólo que mostrar&aacute; un resumen de vlans&#41;.
         <br>
             3&#45; Configurar la interfaz virtual a el switch.
         <br>
-            3.1.&#45; <em><mark class="markPAR">SW&#40;config&#41;&#35; interface vlan1</mark></em> &#40;Seleccionamos la vlan con la que vamos a trabajar&#41;.
+            3.1.&#45; <em class="resaltado">SW&#40;config&#41;&#35; interface vlan1</em> &#40;Seleccionamos la vlan con la que vamos a trabajar&#41;.
         <br>
-            3.2.&#45; <em><mark class="markPAR">SW&#40;config&#45;if&#41;&#35; ip address &#91;InterfazVirtual&#93;&#91;MASK&#93;</mark></em> Ip address 10.0.2.100 con su m&aacute;scara 255.0.0.0.
+            3.2.&#45; <em class="resaltado">SW&#40;config&#45;if&#41;&#35; ip address &#91;InterfazVirtual&#93;&#91;MASK&#93;</em> Ip address 10.0.2.100 con su m&aacute;scara 255.0.0.0.
         <br>
             4&#45; El &uacute;ltimo paso a realizar es subir dicha vlan ya que por defecto se encuentra bajada y o apagada. Para ello realizaremos la negación del comando shutdown.
         <br>
             SW&#40;config&#45;if&#41;&#35; No shutdown.
         <br>
-            5&#45; Realizamos una conexión desde el PC al SW para ello utilizaremos el comando <em><mark class="markPAR">telnet + dirección IP a.telnet 10.0.2.100</mark></em>.
+            5&#45; Realizamos una conexión desde el PC al SW para ello utilizaremos el comando <em class="resaltado">telnet + dirección IP a.telnet 10.0.2.100</em>.
         <br><br>
             En el caso de que si tuvi&eacute;ra un analizador de tr&aacute;fico en la red podr&iacute;a ver en texto plano la informaci&oacute;n que pasa del cliente al servidor telnet.
         <br>
-    </p>
-    <p>
-        <!-- Solucionar creo que el margin de las etiquetas <p> para las sub-páginas de las asignaturas-->
     </p>
     </section>
 </body>

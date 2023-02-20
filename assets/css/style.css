@@ -73,7 +73,6 @@ nav {
     color: rgb(0, 0, 0);
   }
 
-.markPAR{
-  background-color: rgb(199, 45, 45);
-  color:rgb(255, 255, 255)
+.resaltado{
+  color:rgb(0, 0, 255);
 }
