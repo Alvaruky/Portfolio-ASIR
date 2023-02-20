@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
     <title>LMGSI</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,7 +22,7 @@
     <main>
         <h1> Lenguajes de Marcas y Sistemas de Gesti&oacute;n de Informaci&oacute;n </h1>
 
-        <h2>Enlaces Anclas/Internos</h2>
+        <h2><u>Enlaces Anclas/Internos</u></h2>
         
         <p>
             Enlaces dentro de la misma p&aacute;gina. Son enlaces que nos permiten posicionarnos en un punto concreto del documento
@@ -35,13 +38,78 @@
             <br><br>
             Antes en lugar de utilizarse el id se utilizaba el atributo name dentro de la propia etiqueta < a >
             <br><br>
-            <u>Dos variantes de enlaces internos&#58;</u>
+            Dos variantes de enlaces internos&#58;
             <br><br>
             Es decir, dentro de una carpeta accedo ala mitad o al final de la misma. Indica la posici&oacute;n interna en una URL absoluta. Acceso a la Wikipedia Historia de Palencia.
+        </p>
+
+        <h2><u>Atributos de Elementos < a></u></h2>
+
+        <p>
+            El &uacute;nico atributo obligatorio en la etiqueta < a>  es el href que me permite indicar el destino del enlace. Pueden existir algunos atributos
+            m&aacute;s que se pueden utilizar en la etiqueta < a>.
+            <br><br>
+                &#45; El atributo <u>tarjet</u> Permite indicar como se muestra la p&aacute;gina de destino.
+                <mark class="markPAR">tarjet="_blank"</mark> nos permite abrir el enlace a una p&aacute;gina nueva, ya que esta es la opci&oacute; m&aacute;s utilizada.
+            <br>
+                &#45; El atributo <u>download</u> Permite que al hacer clic en el enlace, se abra autom&aacute;ticamente una pestaña y se descargar&aacute; el fichero.
+                Claro est&aacute; de que ha este atributo se le puede añadir un nombre nuevo:
+            <br>
+                <mark class="markPAR">download="prevencion.pdf"</mark> lo cual nos va a descargar un fichero con el nombre que se ha indicado en el download.
+            <br>
+                <strong><u>NOTA</u></strong> El archivo original que se va a descargar se tiene que enyectar en el servidor.
+                <mark class="markPAR">href="documentos/fichaprev.pdf"</mark>
+            <br><br>
+                &#45; El atributo <u>type</u> Simplemente nos permite indicar el tipo de contenido. A continuaci&oacute;n puedes observar varios ejemplos.
+            <br>
+                <mark class="markPAR">< a href="documentos/fichaprev.pdf" ></mark>
+            <br>
+                <mark class="markPAR">type="application/pdf"</mark> En este ejemplo nos indica que el enlace hace referencia a un documento de tipo pdf.
+            <br>
+                <mark class="markPAR">< a href="img/bacalao.png" type="image/png"> descargar imagen </a></mark>
+        </p>
+
+        <h2><u>Introducci&oacute;n a las Im&aacute;genes</u></h2>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum incidunt iusto praesentium, neque
+            beatae iste optio labore! Quibusdam, praesentium quas. Natus quae Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorum in nulla
+            excepturi atque molestiae! Reprehenderit officia deserunt aperiam possimus accusamus blanditiis illo quas. Delectus minus magnam cupiditate ea molestiae.
+            sunt error. Magni qui consectetur cumque odio. adipisicing elit. Eligendi, officia itaque in amet sapiente facilis aliquam, corporis quisquam, architecto
+            molestias tempore dolores! Porro commodi maiores eum ad ea nihil debitis?
         </p>
     </main>
 </body>
 </html>
 
 <!--
+    Las imagenes son fundamentales para crear páginas web atractivas al usuario. Son el primer contenido NO TEXTUAL
+		que se planteó incorporar en el estandar HTML.
+
+		Tipos:
+
+			Formato .jpg:	Imágenes que ocupan muy poco espacio, alta comprensión.
+						NO ADMITEN ANIMACIONES NI TRANSPARENCIAS. Formato habitual.
+
+
+			Formato .gif:	Imágenes con hasta 256 colores son buenaas para dibujos y se pueden utilizar para animaciones
+						(su uso habitual).
+
+
+			Formato .png:	Imágenes fotograficas comprimidas al estilo jpg pero con más calidad.
+						Permite utilizar canales de opacidad.
+						(transparencias), permiten utilizar un fondo y editar su opacidad.
+
+			Formato .webp:	Propio de Google, para hacer la competencia a .png y .jpg ocupan menos y tienen
+						menor perdida de caidad.
+						Problema: solo es soportado por Google y por Opera.
+
+			Formato .SVG:	Formato vectorial de imágenes. Tienen la ventaja de que nunca pierden calidad
+						independientemente de cuanto ampliemos la foto. Problemas de compatibilidad
+						y de tamaño (pesan mucho).
+
+		Elemento Figure:		Agrupa elementos trelativos a una imagen como la propia imagen, el titulo, el pie...
+
+		Elemto Figcaption:	Permite indicar el titulo de una imagen, dentro del elememto anterior (figure) haciendo
+						efecto de un titulo con pie de imágen.
 -->
