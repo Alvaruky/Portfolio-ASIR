@@ -7,6 +7,6 @@
 
 ## **$\textcolor{red}{¿\ Quienes\ somos\ ?}$** 
 
-### **$\textcolor{red}{Álvaro\ Fernández\ García\ :}$**
+### **$\textcolor{red}{Álvaro\ Fernández\ García:}$**
 
-### **$\textcolor{red}{Enrique\ García\ Navarro\ :}$**
+### **$\textcolor{red}{Enrique\ García\ Navarro:}$**
