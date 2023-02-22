@@ -72,3 +72,23 @@ nav {
 .resaltado{
   color:rgb(0, 0, 255);
 }
+
+
+
+
+footer {
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: #898383;
+  color: white;
+  padding: 10px;
+}
