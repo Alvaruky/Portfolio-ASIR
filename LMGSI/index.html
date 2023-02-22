@@ -23,7 +23,7 @@
     <main>
         <h1> Lenguajes de Marcas y Sistemas de Gesti&oacute;n de Informaci&oacute;n </h1>
 
-        <h2><u>Enlaces Anclas/Internos</u></h2>
+        <h2 class="h2-LMGSI"><u>Enlaces Anclas/Internos</u></h2>
         
         <p>
             Enlaces dentro de la misma p&aacute;gina. Son enlaces que nos permiten posicionarnos en un punto concreto del documento
@@ -44,7 +44,7 @@
             Es decir, dentro de una carpeta accedo ala mitad o al final de la misma. Indica la posici&oacute;n interna en una URL absoluta. Acceso a la Wikipedia Historia de Palencia.
         </p>
 
-        <h2><u>Atributos de Elementos &lt;a&gt;</u></h2>
+        <h2 class="h2-LMGSI"><u>Atributos de Elementos &lt;a&gt;</u></h2>
 
         <p>
             El &uacute;nico atributo obligatorio en la etiqueta &lt;a&gt;  es el href que me permite indicar el destino del enlace. Pueden existir algunos atributos
@@ -70,15 +70,87 @@
             <code class="resaltado">&lt;a href="img/bacalao.png" type="image/png"&gt; descargar imagen &lt;/a&gt;</code>
         </p>
 
-        <h2><u>Introducci&oacute;n a las Im&aacute;genes</u></h2>
+        <h2 class="h2-LMGSI"><u>Introducci&oacute;n a las Im&aacute;genes</u></h2>
 
         <p>
-            Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum incidunt iusto praesentium, neque
-            beatae iste optio labore! Quibusdam, praesentium quas. Natus quae Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorum in nulla
-            excepturi atque molestiae! Reprehenderit officia deserunt aperiam possimus accusamus blanditiis illo quas. Delectus minus magnam cupiditate ea molestiae.
-            sunt error. Magni qui consectetur cumque odio. adipisicing elit. Eligendi, officia itaque in amet sapiente facilis aliquam, corporis quisquam, architecto
-            molestias tempore dolores! Porro commodi maiores eum ad ea nihil debitis?
+            Las imagenes son fundamentales para crear páginas web atractivas al usuario. Son el primer contenido NO TEXTUAL
+            que se planteó incorporar en el estandar HTML.
+            <br><br>
+            Tipos:
+            <br><br>
+            Formato .jpg: Imágenes que ocupan muy poco espacio, alta comprensión. NO ADMITEN ANIMACIONES NI TRANSPARENCIAS. Formato habitual.
+            <br><br>
+            Formato .gif: Imágenes con hasta 256 colores son buenaas para dibujos y se pueden utilizar para animaciones (su uso habitual).
+            <br><br>
+            Formato .png: Imágenes fotograficas comprimidas al estilo jpg pero con más calidad. Permite utilizar canales de opacidad
+            (transparencias), permiten utilizar un fondo y editar su opacidad.
+            <br><br>
+            Formato .webp: Propio de Google, para hacer la competencia a .png y .jpg ocupan menos y tienen menor perdida de caidad. El problema
+            está en que solo es soportado por Google y por Opera.
+            <br><br>
+            Formato .SVG: Formato vectorial de imágenes. Tienen la ventaja de que nunca pierden calidad independientemente de cuanto ampliemos la
+            foto. Problemas de compatibilidad y de tamaño (pesan mucho).
+            <br><br><br>
+            Elementos:
+            <br><br>
+            Elemento Figure: Agrupa elementos trelativos a una imagen como la propia imagen, el titulo, el pie...
+            <br><br>
+            Elemto Figcaption:	Permite indicar el titulo de una imagen, dentro del elememto anterior (figure) haciendo efecto de un titulo con pie de imágen.
         </p>
+
+        <h2 class="h2-LMGSI"><u>Insercci&oacute;n de Im&aacute;genes</u></h2>
+
+        <p>
+            Las imagenes se colocan con la etiqueta < img >, importante de todo esto es que es una etiqueta que no tiene cierre.
+            <br>
+            Se considera texto, en el sentido de que yo puedo añadir otras imagenes en la misma linea e incluso en el propio texto "inline".
+            Para colocar de forma adecuada las imagenes se consigue mediante maquetación de CSS.
+            <br><br>
+            Atributo:
+            <br><br>
+            Alt: Descripción de la foto y es un caracter obligatorio que indica un texto alternativo a la imagen. Este texto aparece cuando la
+            imagen no puede cargarse. Este texto se tiene en cuenta en los buscadores con el fin de identificar la imagen y a parte de eso permite
+            conocer que tiene la fotografia (ALT).
+            <br><br>
+            Src: Atributo obligatorio, añadimos la ruta de a imagen.
+            <br><br>
+            Width / Height: El primero me permite indicar la anchura de la imagen y el segundo me permite indicar la altura de la imagen.
+            <br>
+            NOTA: Si añadimos tan solo uno de los dos atributos es capaz de calcular el otro valor a partir del añadido. Widht="300px";
+        </p>
+
+        <h2 class="h2-LMGSI"><U>Etiqueta Picture junto con Source</U></h2>
+
+        <p>
+            Permite mostrar varios medios en una misma página web. Si soruce va dentro de la etiqueta picture puede utilizarse para
+            imagenes y esta tiene tres atributos:
+            <br><br>
+            Srcest: Indicar la dirección del archivo de la imagen que queremos mostrar.
+            <br><br>
+            Type: Me permite indicar el MIME del recurso que vamos a mostrar.
+            <br><br>
+            MIME: Hace referencia al tipo de información que queremos mostrar.
+            <br><br>
+            Media:	Permite consultar el tipo de imagen que se esta mostrando en la página o para el tamaño de la página web si
+            queremos añadir diferentes páginas con distintos tamaños.
+            <br>
+            Ejemplo: Inicialmente va a intentar mostrar la imagen del primer source, si el navegador no es capaz
+            de interpretar el tipo de esa imagen mostrará el segundo source (si existe) y si no mostrará
+            el valor de la etiqueta imagen, y si n9 encunetra la etiqueta imagen mostrará el texto del
+            atributo alt.
+            <br><br>
+            < picture >
+            <br>
+			< source media="(min-with:1000px)" srcest="../../img/aceituna.jpg" >
+            <br>
+				< source srcest="../../img/cebolla.jpg" media="(min-with:700px)" >
+            <br>
+				< img srcest="../../img/patata.jpg" alt= "alimentacón" ><
+            <br>
+			< /picture >
+        </p>
+
+
     </main>
     <footer>
         <article>
@@ -93,9 +165,6 @@
                     <div class="grid-item"><a href="https://www.centrodonbosco.es/" target="_blank">Centro Don Bosco</a></div>
                     <div class="grid-item"><a href="https://www.centrodonbosco.es/estudios/asir" target="_blank">ASIR</a></div>
                 </div>
-        <!--<section>
-                <h3>Centro D</h3>
-            </section>-->
             </section>
         </article>
     </footer>
@@ -103,33 +172,102 @@
 </html>
 
 <!--
-    Las imagenes son fundamentales para crear páginas web atractivas al usuario. Son el primer contenido NO TEXTUAL
-		que se planteó incorporar en el estandar HTML.
+ELEMENTOS MULTIMEDIA
 
-		Tipos:
+		Esencialmente la base es la inclusion de imagenes pero cada vez más se agregan a las paginas web vídeos o sonidos
+		en definitiva en elementos visuales que hagan a las páginas más atractivas.
 
-			Formato .jpg:	Imágenes que ocupan muy poco espacio, alta comprensión.
-						NO ADMITEN ANIMACIONES NI TRANSPARENCIAS. Formato habitual.
+		El video es un tipo de contenido que ocupa mucho espacio p9or lo que siempre se intenta comprimir al máximo su tamaño
+		para ello se utliza software especial por estos mmotivos.
+
+		Formatos de video utilizados en html5;
+
+			MP4 -> 	Probablemente uno de los más populares ya que es compatible con los navegadores (tanto de pcs como
+					de móviles).
+
+			WebM -> 	Creado por Google pero es compatible CASI con todos los ordenadores, comprime mejor
+					que el MP4 lo que hace que sea más optimo a la hora de visualizar el vídeo..
+					
+			OGG Video ->	Es un formato abierto y sin patentes, vamos que es de codigo abierto.
 
 
-			Formato .gif:	Imágenes con hasta 256 colores son buenaas para dibujos y se pueden utilizar para animaciones
-						(su uso habitual).
+
+	FORMAS DE INCLUIR UN VIDEO
+
+			<a href="../../img/video.mp4"> Ver video </a>
+
+			<video src="../../img/video.mp4"> controls </a>
+
+			<video src="../../img/video.mp4"> controls poster="../../img/patata.jp" </a>
 
 
-			Formato .png:	Imágenes fotograficas comprimidas al estilo jpg pero con más calidad.
-						Permite utilizar canales de opacidad.
-						(transparencias), permiten utilizar un fondo y editar su opacidad.
+		Atributos del elemnto video:
 
-			Formato .webp:	Propio de Google, para hacer la competencia a .png y .jpg ocupan menos y tienen
-						menor perdida de caidad.
-						Problema: solo es soportado por Google y por Opera.
+			Src -> URL el video que se desea mostrar.
 
-			Formato .SVG:	Formato vectorial de imágenes. Tienen la ventaja de que nunca pierden calidad
-						independientemente de cuanto ampliemos la foto. Problemas de compatibilidad
-						y de tamaño (pesan mucho).
+			Autoplay -> Usa el valor fijo de autoplay para iniciar el video de manera automática.
 
-		Elemento Figure:		Agrupa elementos trelativos a una imagen como la propia imagen, el titulo, el pie...
+			Controls -> 	Con este valor indica que el navegador mostrara los controles para que el usuario pueda controlar
+						la reproducción (parar, bajor subir el sonido, poner subtitulos, etc...)
 
-		Elemto Figcaption:	Permite indicar el titulo de una imagen, dentro del elememto anterior (figure) haciendo
-						efecto de un titulo con pie de imágen.
+			Poster -> 	Permite indicar la direcciónb URL de una imagen que s e mostrara mientras el video se encuentra
+					reproduciemdo. Será eñ primer fotograma.
+
+			Muted -> Quita sonido al video.
+
+			Width y Height -> Altura y anchura del video.
+
+
+			Añadie subtitulos:
+
+				<video controls>
+
+					<source src="../../img/video.mp4" type="video/mp4">
+					
+					<track kind="subtitles" src="../../img/videos/traducciones.vtt" srclang="es" label="Castellano">
+
+				</video>
+
+				.vtt -> tiempo de subtitulos.
+
+			<video src="../../img/video.mp4"> controls autoplay muted" ->	Se reproduce el vídeo automáticamente, aparece la barra de herramientas
+															y por defecto esta en silencio.
+
+				SUBTITULOS:
+
+					Los subtítulos me permiten traducir el contenido de un vídeo. Por ejemplo el video puede ser una canción grabada del inglés
+					y los subtítulos nos lo mostrara traducido al español en tiempo real.
+
+					Hay varios formatos/extensuiones para los subrtitulos por lo general cuandp se usan en la web se utiliza webVTT
+					Ejemplo:	traduccionES.vtt
+
+					Dentro de este fichero deberemos de incluir un parametro que es el WEBVTT.
+
+					Acto y seguido podremos ir añadiendo los segundos del video en los que apareceran los subtitulos y lo que duran.
+
+						00:00:01.150	->		00:00:03.150
+
+                        ¿Cuánto durará en este caso la track del primer subtitulo?	En el ejemplo anterior durara 2 segundos.
+
+                        A continuacion de estos segundos, indicaremos en la linea siguiente el texto a subtitular. ESFUERZOS.
+    
+                            <video>
+    
+                                <source src="esfuerzos.mp4" type="video/mp4">
+    
+                                <track kind="subtitles" src="traduccionES.vtt" srclang="es" label="Castellano">
+    
+                    ETIQYETA TRACK:
+    
+                        Me permite asignar subtitulos a un video, tiene los siguientes atributos:
+    
+                            Kind:
+    
+                                Tipo de subtitulos:
+    
+                                    Subtitles:	Subtitulos normales.
+    
+                            Label:	Nombre de los subtitulos para reconocerlos en el controls.
+    
+                            Srclang:	Indicar el codigo del idioma de los subtitulos.
 -->
