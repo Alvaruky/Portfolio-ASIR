@@ -35,7 +35,7 @@
             <br><br>
             Nuestros enlaces internos&#47;anclas este identificador ser&aacute; el denominado Ancla.
             <br><br>
-            <em class="resaltado">&lt;h1 id="Ancla"&gt; Ir a mitad &lt;/h1&gt;</em>
+            <code class="resaltado">&lt;h1 id="Ancla"&gt; Ir a mitad &lt;/h1&gt;</code>
             <br><br>
             Antes en lugar de utilizarse el id se utilizaba el atributo name dentro de la propia etiqueta &lt;a&gt;
             <br><br>
@@ -51,23 +51,23 @@
             m&aacute;s que se pueden utilizar en la etiqueta &lt;a&gt;.
             <br><br>
             &#45; El atributo <u>tarjet</u> Permite indicar como se muestra la p&aacute;gina de destino.
-            <em class="resaltado">tarjet="_blank"</em> nos permite abrir el enlace a una p&aacute;gina nueva, ya que esta es la opci&oacute; m&aacute;s utilizada.
+            <code class="resaltado">tarjet="_blank"</code> nos permite abrir el enlace a una p&aacute;gina nueva, ya que esta es la opci&oacute; m&aacute;s utilizada.
             <br>
             &#45; El atributo <u>download</u> Permite que al hacer clic en el enlace, se abra autom&aacute;ticamente una pestaña y se descargar&aacute; el fichero.
             Claro est&aacute; de que ha este atributo se le puede añadir un nombre nuevo:
             <br>
-            <em class="resaltado">download="prevencion.pdf"</em> lo cual nos va a descargar un fichero con el nombre que se ha indicado en el download.
+            <code class="resaltado">download="prevencion.pdf"</code> lo cual nos va a descargar un fichero con el nombre que se ha indicado en el download.
             <br>
             <strong><u>NOTA</u></strong> El archivo original que se va a descargar se tiene que enyectar en el servidor.
-            <em class="resaltado">href="documentos/fichaprev.pdf"</em>
+            <code class="resaltado">href="documentos/fichaprev.pdf"</code>
             <br><br>
             &#45; El atributo <u>type</u> Simplemente nos permite indicar el tipo de contenido. A continuaci&oacute;n puedes observar varios ejemplos.
             <br>
-            <em class="resaltado">&lt;a href="documentos/fichaprev.pdf"&gt;</em>
+            <code class="resaltado">&lt;a href="documentos/fichaprev.pdf"&gt;</code>
             <br>
-            <em class="resaltado">type="application/pdf"</em> En este ejemplo nos indica que el enlace hace referencia a un documento de tipo pdf.
+            <code class="resaltado">type="application/pdf"</code> En este ejemplo nos indica que el enlace hace referencia a un documento de tipo pdf.
             <br>
-            <em class="resaltado">&lt;a href="img/bacalao.png" type="image/png"&gt; descargar imagen &lt;/a&gt;</em>
+            <code class="resaltado">&lt;a href="img/bacalao.png" type="image/png"&gt; descargar imagen &lt;/a&gt;</code>
         </p>
 
         <h2><u>Introducci&oacute;n a las Im&aacute;genes</u></h2>
@@ -81,12 +81,23 @@
         </p>
     </main>
     <footer>
-        <div class="grid-container">
-            <div class="grid-item">&copy; Enrique Garc&iacute;a</div>
-            <div class="grid-item">&copy; &Aacute;lvaro Fern&aacute;ndez</div>
-            <div class="grid-item"><a href="https://www.centrodonbosco.es/" target="_blank">Centro Don Bosco</a></div>
-            <div class="grid-item"><a href="https://www.centrodonbosco.es/estudios/asir" target="_blank">ASIR</a></div>
-          </div>
+        <article>
+            <section>
+                <div class="grid-container">
+                    <div class="grid-item">&copy; Enrique Garc&iacute;a</div>
+                    <div class="grid-item">&copy; &Aacute;lvaro Fern&aacute;ndez</div>
+                </div>
+            </section>
+            <section>
+                <div class="grid-container">
+                    <div class="grid-item"><a href="https://www.centrodonbosco.es/" target="_blank">Centro Don Bosco</a></div>
+                    <div class="grid-item"><a href="https://www.centrodonbosco.es/estudios/asir" target="_blank">ASIR</a></div>
+                </div>
+        <!--<section>
+                <h3>Centro D</h3>
+            </section>-->
+            </section>
+        </article>
     </footer>
 </body>
 </html>
