@@ -1,0 +1,27 @@
+pre.sql {
+    background-color: rgba(67, 67, 67, 0.62);
+    padding: 20px;
+    border-radius: 25px;
+}
+code {
+    font-weight: bold;
+}
+span.sql-instrution{
+    color: rgb(181, 48, 0);
+}
+span.sql-column{
+    color: blueviolet;
+}
+span.sql-table {
+    color: blue;
+}
+span.sql-alias {
+    color: rgb(240, 240, 142);
+    opacity: 75%;
+}
+span.sql-function {
+    color: green;
+}
+span.sql-comment {
+    color: gray;
+}
