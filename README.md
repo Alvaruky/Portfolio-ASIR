@@ -8,6 +8,6 @@
 
 ## <h2 align="left"><strong>¿QUIÉNES SOMOS?</strong></h2>
 
-### <h3 align="left"><em><strong>Álvaro Fernández García</strong></em></h3>
+### <h3 align="left"><strong>Álvaro Fernández García</strong></h3>
 
-### <h3 align="left"><em><strong>Enrique García Navarro</strong></em></h3>
+### <h3 align="left"><strong>Enrique García Navarro</strong></h3>
