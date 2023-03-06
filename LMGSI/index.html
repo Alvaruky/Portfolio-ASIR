@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
     <title>LMGSI</title>
-    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav>
@@ -25,13 +27,16 @@
         <br />
         <a href="html-ref/">Ver todas las referencias HTML</a>
         <h2 class="center"><u>Enlaces Anclas/Internos</u></h2>
-        
+
         <p>
-            Enlaces dentro de la misma p&aacute;gina. Son enlaces que nos permiten posicionarnos en un punto concreto del documento
-            dentro de la misma p&aacute;gina. Por lo tanto, creamos un enlace que nmos lleva a un bloque de contenido de la p&aacute;gina.
+            Enlaces dentro de la misma p&aacute;gina. Son enlaces que nos permiten posicionarnos en un punto concreto
+            del documento
+            dentro de la misma p&aacute;gina. Por lo tanto, creamos un enlace que nmos lleva a un bloque de contenido de
+            la p&aacute;gina.
             <br><br>
             ID Es un atributo presente en cualquier elemento de la p&aacute;gina y nos permite identificar
-            dicho elemnto &#40;dengtro de la propia pagina&#41; <strong>CUIDADO</strong> no se pueden repetir los valores del identificador
+            dicho elemnto &#40;dengtro de la propia pagina&#41; <strong>CUIDADO</strong> no se pueden repetir los
+            valores del identificador
             para ese atributo en cualquier otro elemento es unico.
             <br><br>
             Nuestros enlaces internos&#47;anclas este identificador ser&aacute; el denominado Ancla.
@@ -42,31 +47,38 @@
             <br><br>
             Dos variantes de enlaces internos&#58;
             <br><br>
-            Es decir, dentro de una carpeta accedo ala mitad o al final de la misma. Indica la posici&oacute;n interna en una URL absoluta. Acceso a la Wikipedia Historia de Palencia.
+            Es decir, dentro de una carpeta accedo ala mitad o al final de la misma. Indica la posici&oacute;n interna
+            en una URL absoluta. Acceso a la Wikipedia Historia de Palencia.
         </p>
 
         <h2 class="h2-LMGSI"><u>Atributos de Elementos &lt;a&gt;</u></h2>
 
         <p>
-            El &uacute;nico atributo obligatorio en la etiqueta &lt;a&gt;  es el href que me permite indicar el destino del enlace. Pueden existir algunos atributos
+            El &uacute;nico atributo obligatorio en la etiqueta &lt;a&gt; es el href que me permite indicar el destino
+            del enlace. Pueden existir algunos atributos
             m&aacute;s que se pueden utilizar en la etiqueta &lt;a&gt;.
             <br><br>
             &#45; El atributo <u>tarjet</u> Permite indicar como se muestra la p&aacute;gina de destino.
-            <code class="resaltado">tarjet="_blank"</code> nos permite abrir el enlace a una p&aacute;gina nueva, ya que esta es la opci&oacute; m&aacute;s utilizada.
+            <code class="resaltado">tarjet="_blank"</code> nos permite abrir el enlace a una p&aacute;gina nueva, ya que
+            esta es la opci&oacute; m&aacute;s utilizada.
             <br>
-            &#45; El atributo <u>download</u> Permite que al hacer clic en el enlace, se abra autom&aacute;ticamente una pestaña y se descargar&aacute; el fichero.
+            &#45; El atributo <u>download</u> Permite que al hacer clic en el enlace, se abra autom&aacute;ticamente una
+            pestaña y se descargar&aacute; el fichero.
             Claro est&aacute; de que ha este atributo se le puede añadir un nombre nuevo:
             <br>
-            <code class="resaltado">download="prevencion.pdf"</code> lo cual nos va a descargar un fichero con el nombre que se ha indicado en el download.
+            <code class="resaltado">download="prevencion.pdf"</code> lo cual nos va a descargar un fichero con el nombre
+            que se ha indicado en el download.
             <br>
             <strong><u>NOTA</u></strong> El archivo original que se va a descargar se tiene que enyectar en el servidor.
             <code class="resaltado">href="documentos/fichaprev.pdf"</code>
             <br><br>
-            &#45; El atributo <u>type</u> Simplemente nos permite indicar el tipo de contenido. A continuaci&oacute;n puedes observar varios ejemplos.
+            &#45; El atributo <u>type</u> Simplemente nos permite indicar el tipo de contenido. A continuaci&oacute;n
+            puedes observar varios ejemplos.
             <br>
             <code class="resaltado">&lt;a href="documentos/fichaprev.pdf"&gt;</code>
             <br>
-            <code class="resaltado">type="application/pdf"</code> En este ejemplo nos indica que el enlace hace referencia a un documento de tipo pdf.
+            <code class="resaltado">type="application/pdf"</code> En este ejemplo nos indica que el enlace hace
+            referencia a un documento de tipo pdf.
             <br>
             <code class="resaltado">&lt;a href="img/bacalao.png" type="image/png"&gt; descargar imagen &lt;/a&gt;</code>
         </p>
@@ -74,57 +86,72 @@
         <h2 class="h2-LMGSI"><u>Introducci&oacute;n a las Im&aacute;genes</u></h2>
 
         <p>
-            Las im&aacute;genes son fundamentales para crear p&aacute;ginas web atractivas al usuario. Son el primer contenido NO TEXTUAL
+            Las im&aacute;genes son fundamentales para crear p&aacute;ginas web atractivas al usuario. Son el primer
+            contenido NO TEXTUAL
             que se plante&oacute; incorporar en el est&aacute;ndar HTML.
             <br><br>
             Tipos&#58;
             <br><br>
-            <u>Formato .jpg&#58;</u> Im&aacute;genes que ocupan muy poco espacio, alta comprensi&oacute;n. NO ADMITEN ANIMACIONES NI TRANSPARENCIAS. Formato habitual.
+            <u>Formato .jpg&#58;</u> Im&aacute;genes que ocupan muy poco espacio, alta comprensi&oacute;n. NO ADMITEN
+            ANIMACIONES NI TRANSPARENCIAS. Formato habitual.
             <br><br>
-            <u>Formato .gif&#58;</u> Im&aacute;genes con hasta 256 colores son buenas para dibujos y se pueden utilizar para animaciones &#40;su uso habitual&#41;.
+            <u>Formato .gif&#58;</u> Im&aacute;genes con hasta 256 colores son buenas para dibujos y se pueden utilizar
+            para animaciones &#40;su uso habitual&#41;.
             <br><br>
-            <u>Formato .png&#58;</u> Im&aacute;genes fotogr&aacute;ficas comprimidas al estilo jpg pero con m&aacute;s calidad. Permite utilizar canales de opacidad
+            <u>Formato .png&#58;</u> Im&aacute;genes fotogr&aacute;ficas comprimidas al estilo jpg pero con m&aacute;s
+            calidad. Permite utilizar canales de opacidad
             &#40;transparencias&#41;, permiten utilizar un fondo y editar su opacidad.
             <br><br>
-            <u>Formato .webp&#58;</u> Propio de Google, para hacer la competencia a .png y .jpg ocupan menos y tienen menor perdida de calidad. El problema
+            <u>Formato .webp&#58;</u> Propio de Google, para hacer la competencia a .png y .jpg ocupan menos y tienen
+            menor perdida de calidad. El problema
             est&aacute; en que solo es soportado por Google y por Opera.
             <br><br>
-            <u>Formato .SVG&#58;</u> Formato vectorial de im&aacute;genes. Tienen la ventaja de que nunca pierden calidad independientemente de cuanto ampliemos la
+            <u>Formato .SVG&#58;</u> Formato vectorial de im&aacute;genes. Tienen la ventaja de que nunca pierden
+            calidad independientemente de cuanto ampliemos la
             foto. Problemas de compatibilidad y de tamaño &#40;pesan mucho&#41;.
             <br><br><br>
             Elementos&#58;
             <br><br>
-            <u>Elemento Figure&#58;</u> Agrupa elementos relativos a una im&aacute;gen como la propia im&aacute;gen, el t&iacute;tulo, el pie...
+            <u>Elemento Figure&#58;</u> Agrupa elementos relativos a una im&aacute;gen como la propia im&aacute;gen, el
+            t&iacute;tulo, el pie...
             <br><br>
-            <u>Elemto Figcaption&#58;</u> Permite indicar el t&iacute;tulo de una imagen, dentro del elememto anterior &#40;figure&#41; haciendo efecto de un t&iacute;tulo con pie de im&aacute;gen.
+            <u>Elemto Figcaption&#58;</u> Permite indicar el t&iacute;tulo de una imagen, dentro del elememto anterior
+            &#40;figure&#41; haciendo efecto de un t&iacute;tulo con pie de im&aacute;gen.
         </p>
 
         <h2 class="h2-LMGSI"><u>Insercci&oacute;n de Im&aacute;genes</u></h2>
 
         <p>
-            Las im&aacute;genes se colocan con la etiqueta <code class="resaltado">&#60;img&#62;</code>, importante de todo esto es que es una etiqueta que no tiene cierre.
+            Las im&aacute;genes se colocan con la etiqueta <code class="resaltado">&#60;img&#62;</code>, importante de
+            todo esto es que es una etiqueta que no tiene cierre.
             <br>
-            Se considera texto, en el sentido de que yo puedo añadir otras im&aacute;genes en la misma linea e incluso en el propio texto &#34;inline&#34;.
+            Se considera texto, en el sentido de que yo puedo añadir otras im&aacute;genes en la misma linea e incluso
+            en el propio texto &#34;inline&#34;.
             Para colocar de forma adecuada las im&aacute;genes se consigue mediante maquetaci&oacute;n de CSS.
             <br><br>
             Atributo&#58;
             <br><br>
-            <u>Alt&#58;</u> Descripci&oacute;n de la foto y es un caracter obligatorio que indica un texto alternativo a la im&aacute;gen. Este texto aparece cuando la
-            im&aacute;gen no puede cargarse. Este texto se tiene en cuenta en los buscadores con el fin de identificar la im&aacute;gen y a parte de eso permite
+            <u>Alt&#58;</u> Descripci&oacute;n de la foto y es un caracter obligatorio que indica un texto alternativo a
+            la im&aacute;gen. Este texto aparece cuando la
+            im&aacute;gen no puede cargarse. Este texto se tiene en cuenta en los buscadores con el fin de identificar
+            la im&aacute;gen y a parte de eso permite
             conocer que tiene la fotografia &#40;ALT&#41;.
             <br><br>
             <u>Src&#58;</u> Atributo obligatorio, añadimos la ruta de a im&aacute;gen.
             <br><br>
-            <u>Width &#47; Height&#58;</u> El primero me permite indicar la anchura de la im&aacute;gen y el segundo me permite indicar la altura de la im&aacute;gen.
+            <u>Width &#47; Height&#58;</u> El primero me permite indicar la anchura de la im&aacute;gen y el segundo me
+            permite indicar la altura de la im&aacute;gen.
             <br>
-            <strong>NOTA&#58;</strong> Si añadimos tan solo uno de los dos atributos es capaz de calcular el otro valor a partir del añadido.
+            <strong>NOTA&#58;</strong> Si añadimos tan solo uno de los dos atributos es capaz de calcular el otro valor
+            a partir del añadido.
             <code class="resaltado">widht&#61;&#34;300px&#34;&#59;</code>
         </p>
 
         <h2 class="h2-LMGSI"><U>Etiqueta Picture junto con Source</U></h2>
 
         <p>
-            Permite mostrar varios medios en una misma p&aacute;gina web. Si source va dentro de la etiqueta picture puede utilizarse para
+            Permite mostrar varios medios en una misma p&aacute;gina web. Si source va dentro de la etiqueta picture
+            puede utilizarse para
             im&aacute;genes y esta tiene tres atributos&#58;
             <br><br>
             <u>Srcest&#58;</u> Indicar la direcci&oacute;n del archivo de la im&aacute;gen que queremos mostrar.
@@ -133,12 +160,16 @@
             <br><br>
             <u>MIME&#58;</u> Hace referencia al tipo de informaci&oacute;n que queremos mostrar.
             <br><br>
-            <u>Media&#58;</u> Permite consultar el tipo de im&aacute;gen que se esta mostrando en la p&aacute;gina o para el tamaño de la p&aacute;gina web si
+            <u>Media&#58;</u> Permite consultar el tipo de im&aacute;gen que se esta mostrando en la p&aacute;gina o
+            para el tamaño de la p&aacute;gina web si
             queremos añadir diferentes p&aacute;ginas con distintos tamaños.
             <br>
-            Ejemplo&#58; Inicialmente va a intentar mostrar la im&aacute;gen del primer source, si el navegador no es capaz
-            de interpretar el tipo de esa im&aacute;gen mostrar&aacute; el segundo source &#40;si existe&#41; y si no mostrar&aacute;
-            el valor de la etiqueta im&aacute;gen, y si no encuentra la etiqueta im&aacute;gen mostrar&aacute; el texto del
+            Ejemplo&#58; Inicialmente va a intentar mostrar la im&aacute;gen del primer source, si el navegador no es
+            capaz
+            de interpretar el tipo de esa im&aacute;gen mostrar&aacute; el segundo source &#40;si existe&#41; y si no
+            mostrar&aacute;
+            el valor de la etiqueta im&aacute;gen, y si no encuentra la etiqueta im&aacute;gen mostrar&aacute; el texto
+            del
             atributo alt.
             <br><br>
             <code class="resaltado">&#60;picture&#62;
@@ -155,15 +186,18 @@
         <h2 class="h2-LMGSI"><U>Elementos Multimedia</U></h2>
 
         <p>
-            Esencialmente la base es la inclusi&oacute;n de im&aacute;genes pero cada vez m&aacute;s se agregan a las p&aacute;ginas web v&iacute;deos o sonidos
+            Esencialmente la base es la inclusi&oacute;n de im&aacute;genes pero cada vez m&aacute;s se agregan a las
+            p&aacute;ginas web v&iacute;deos o sonidos
             en definitiva en elementos visuales que hagan a las p&aacute;ginas m&aacute;s atractivas.
             <br>
-            El v&iacute;deo es un tipo de contenido que ocupa mucho espacio por lo que siempre se intenta comprimir al m&aacute;ximo su tamaño
+            El v&iacute;deo es un tipo de contenido que ocupa mucho espacio por lo que siempre se intenta comprimir al
+            m&aacute;ximo su tamaño
             para ello se utliza software especial por estos motivos.
             <br><br><br>
             Formatos de v&iacute;deo utilizados en html5;
             <br><br>
-            <u>MP4&#58;</u> Probablemente uno de los m&aacute;s populares ya que es compatible con los navegadores (tanto de pcs como
+            <u>MP4&#58;</u> Probablemente uno de los m&aacute;s populares ya que es compatible con los navegadores
+            (tanto de pcs como
             de m&oacute;viles).
             <br><br>
             <u>WebM&#58;</u> Creado por Google pero es compatible CASI con todos los ordenadores, comprime mejor
@@ -194,13 +228,16 @@
             </section>
             <section>
                 <div class="grid-container">
-                    <div class="grid-item"><a href="https://www.centrodonbosco.es/" target="_blank">Centro Don Bosco</a></div>
-                    <div class="grid-item"><a href="https://www.centrodonbosco.es/estudios/asir" target="_blank">ASIR</a></div>
+                    <div class="grid-item"><a href="https://www.centrodonbosco.es/" target="_blank">Centro Don Bosco</a>
+                    </div>
+                    <div class="grid-item"><a href="https://www.centrodonbosco.es/estudios/asir"
+                            target="_blank">ASIR</a></div>
                 </div>
             </section>
         </article>
     </footer>
 </body>
+
 </html>
 
 <!--

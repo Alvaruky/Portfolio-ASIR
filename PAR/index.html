@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
     <title>PAR</title>
-    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav>
@@ -23,81 +25,103 @@
 
     <main>
         <h1> Planificaci&oacute;n y Administraci&oacute;n de Redes </h1>
-    <section>
-    <h1 class="evaluaciones"><u>2ª Evaluaci&oacute;n</u></h1>
+        <section>
+            <h1 class="evaluaciones"><u>2ª Evaluaci&oacute;n</u></h1>
 
-    <h2 class="center"><u>Autenticaci&oacute;n mediante usuarios y contraseñas</u></h2>
+            <h2 class="center"><u>Autenticaci&oacute;n mediante usuarios y contraseñas</u></h2>
 
-    <p>
-            Para realizar la autenticaci&oacute;n de usuarios y contraseñas deberemos de crear los usuarios &quot;Bart&quot;
-            y &quot;lisa&quot;, para ello deberemos de meternos en vlan en el switch.
-            IOS ofrefrece la posibilidad de autenticaci&oacute;n por usuario, donde cada uno de ellos dispondr&aacute; de sus propias credenciales, eliminando de esta manera
-            la contraseña compartida.
-        <br><br><br>
-            <h2 class="h2-PAR"><u>Configuraci&oacute;n de la Autenticaci&oacute;n &#40;2 t&eacute;cnicas&#41;&#58;</u></h2>
-        <br><br>
+            <p>
+                Para realizar la autenticaci&oacute;n de usuarios y contraseñas deberemos de crear los usuarios
+                &quot;Bart&quot;
+                y &quot;lisa&quot;, para ello deberemos de meternos en vlan en el switch.
+                IOS ofrefrece la posibilidad de autenticaci&oacute;n por usuario, donde cada uno de ellos
+                dispondr&aacute; de sus propias credenciales, eliminando de esta manera
+                la contraseña compartida.
+                <br><br><br>
+            <h2 class="h2-PAR"><u>Configuraci&oacute;n de la Autenticaci&oacute;n &#40;2 t&eacute;cnicas&#41;&#58;</u>
+            </h2>
+            <br><br>
             Local &#40;a trav&eacute;s de servidores AAA&#41;&#58;
-        <br><br>
-            El switch genera una base de datos en el propio dispositivo que almacena tanto los usuarios como las contraseñas definidas. Para realizar la configuraci&oacute;n
-            primero de todo deberemos de crear los usuarios necesarios mediante la ejecuci&oacute;n del comando &#34;<code class="resaltado">username &#91;nombreUsuario&#93; password</code>&#34;
-            y luego de ello debe de crear la contraseña ejecutando el comando &#34;<code class="resaltado">secret &#91;contraseñaUsuario&#93;</code>&#34;. La principal diferencia es que lo guarda
-            cifrado y el otro lo guarda en texto plano. Debemos de habilitar la autenticaci&oacute;n sobre la conexi&oacute;n de consola y, en caso de que fuese necesario
-            desde remoto &#34;<code class="resaltado">l&iacute;neas vty</code>&#34; ejecutando el comando &quot;<code class="resaltado">login local</code>&quot;.
-        <br><br>
+            <br><br>
+            El switch genera una base de datos en el propio dispositivo que almacena tanto los usuarios como las
+            contraseñas definidas. Para realizar la configuraci&oacute;n
+            primero de todo deberemos de crear los usuarios necesarios mediante la ejecuci&oacute;n del comando
+            &#34;<code class="resaltado">username &#91;nombreUsuario&#93; password</code>&#34;
+            y luego de ello debe de crear la contraseña ejecutando el comando &#34;<code
+                class="resaltado">secret &#91;contraseñaUsuario&#93;</code>&#34;. La principal diferencia es que lo
+            guarda
+            cifrado y el otro lo guarda en texto plano. Debemos de habilitar la autenticaci&oacute;n sobre la
+            conexi&oacute;n de consola y, en caso de que fuese necesario
+            desde remoto &#34;<code class="resaltado">l&iacute;neas vty</code>&#34; ejecutando el comando &quot;<code
+                class="resaltado">login local</code>&quot;.
+            <br><br>
             Aqu&iacute; podr&aacute;s encontrar un ejemplo de como crear ambos usuarios&#58;
-        <br><br>
+            <br><br>
             1&#45; <code class="resaltado">SW1&#40;config&#41;&#35; username bart secret bart</code>
-        <br>
+            <br>
             2&#45; <code class="resaltado">SW1&#40;config&#41;&#35; username lisa secret lisa</code>
-        <br>
+            <br>
             3&#45; <code class="resaltado">SW1&#40;config&#41;&#35; line console 0</code>
-        <br>
+            <br>
             4&#45; <code class="resaltado">SW1&#40;config&#45;line&#41;&#35; login local</code>
-        <br>
+            <br>
             4&#45; <code class="resaltado">SW1&#40;config&#45;line&#41;&#35; exit</code>
-        <br>
+            <br>
             5&#45; <code class="resaltado">SW1&#40;config&#41;&#35; line vty 0 3</code>
-        <br>
+            <br>
             6&#45; <code class="resaltado">SW1&#40;config&#45;line&#41;&#35; login local</code>
-        <br>
+            <br>
             7&#45; <code class="resaltado">SW1&#40;config&#45;line&#41;&#35; exit</code>
-        <br><br><br>
+            <br><br><br>
             <h2 class="h2-PAR"><u>Acceso por telnet a un switch de Cisco</u></h2>
-        <br><br>
-            Lo primero de todo deberemos de tener creado uno o varios usuarios en el switch, mediante autenticaci&oacute;n local o mediante servidores AAA. Muy <u>importante</u>,
-            para poder establecer una conexi&oacute;n via remoto resulta imprescindible que el switch tenga configurada una direcci&oacute;n IP, dicha IP ser&aacute; utilizada
+            <br><br>
+            Lo primero de todo deberemos de tener creado uno o varios usuarios en el switch, mediante
+            autenticaci&oacute;n local o mediante servidores AAA. Muy <u>importante</u>,
+            para poder establecer una conexi&oacute;n via remoto resulta imprescindible que el switch tenga configurada
+            una direcci&oacute;n IP, dicha IP ser&aacute; utilizada
             para temas de administraci&oacute;n, nunca para tareas de la capa 3.
-        <br>
-            Para ello necesitaremos crear una interfaz virtual denominada <code>vlan interface</code> la cual me permite configurar una direcci&oacute;n IP y una m&aacute;scara
-            asociada. Es necesario crear una interfaz virtual y no estar configurado directamente sobre una capa f&iacute;sica ya que dichas capas f&iacute;sicas de un switch
+            <br>
+            Para ello necesitaremos crear una interfaz virtual denominada <code>vlan interface</code> la cual me permite
+            configurar una direcci&oacute;n IP y una m&aacute;scara
+            asociada. Es necesario crear una interfaz virtual y no estar configurado directamente sobre una capa
+            f&iacute;sica ya que dichas capas f&iacute;sicas de un switch
             s&oacute;lo operan en la capa 2.
-        <br><br>
+            <br><br>
             Creaci&oacute;n de la interfaz virtual&#58;
-        <br><br>
-            1&#45; Asignamos direcciones IP a cada uno de los elementos involucrados en el esquema, en este caso un switch o un host.
-        <br>
+            <br><br>
+            1&#45; Asignamos direcciones IP a cada uno de los elementos involucrados en el esquema, en este caso un
+            switch o un host.
+            <br>
             2&#45; Deberemos de comprobar la vlan por defecto en el switch.
-        <br>
-            2.1.&#45; <code class="resaltado">&#35; show vlan</code> &#40;Muestra el conjunto de vlan utilizas y las interfaces asociadas a cada vlan&#41;.
-        <br>
-            2.2.&#45; <code class="resaltado">SW1&#35; show vlan brief</code> &#40;Mismo que el anterior sólo que mostrar&aacute; un resumen de vlans&#41;.
-        <br>
+            <br>
+            2.1.&#45; <code class="resaltado">&#35; show vlan</code> &#40;Muestra el conjunto de vlan utilizas y las
+            interfaces asociadas a cada vlan&#41;.
+            <br>
+            2.2.&#45; <code class="resaltado">SW1&#35; show vlan brief</code> &#40;Mismo que el anterior sólo que
+            mostrar&aacute; un resumen de vlans&#41;.
+            <br>
             3&#45; Configurar la interfaz virtual a el switch.
-        <br>
-            3.1.&#45; <code class="resaltado">SW&#40;config&#41;&#35; interface vlan1</code> &#40;Seleccionamos la vlan con la que vamos a trabajar&#41;.
-        <br>
-            3.2.&#45; <code class="resaltado">SW&#40;config&#45;if&#41;&#35; ip address &#91;InterfazVirtual&#93;&#91;MASK&#93;</code> Ip address 10.0.2.100 con su m&aacute;scara 255.0.0.0.
-        <br>
-            4&#45; El &uacute;ltimo paso a realizar es subir dicha vlan ya que por defecto se encuentra bajada y o apagada. Para ello realizaremos la negación del comando shutdown.
-        <br>
+            <br>
+            3.1.&#45; <code class="resaltado">SW&#40;config&#41;&#35; interface vlan1</code> &#40;Seleccionamos la vlan
+            con la que vamos a trabajar&#41;.
+            <br>
+            3.2.&#45; <code
+                class="resaltado">SW&#40;config&#45;if&#41;&#35; ip address &#91;InterfazVirtual&#93;&#91;MASK&#93;</code>
+            Ip address 10.0.2.100 con su m&aacute;scara 255.0.0.0.
+            <br>
+            4&#45; El &uacute;ltimo paso a realizar es subir dicha vlan ya que por defecto se encuentra bajada y o
+            apagada. Para ello realizaremos la negación del comando shutdown.
+            <br>
             SW&#40;config&#45;if&#41;&#35; No shutdown.
-        <br>
-            5&#45; Realizamos una conexión desde el PC al SW para ello utilizaremos el comando <code class="resaltado">telnet + dirección IP a.telnet 10.0.2.100</code>.
-        <br><br>
-            En el caso de que si tuvi&eacute;ra un analizador de tr&aacute;fico en la red podr&iacute;a ver en texto plano la informaci&oacute;n que pasa del cliente al servidor telnet.
-        <br>
-    </p>
-    </section>
+            <br>
+            5&#45; Realizamos una conexión desde el PC al SW para ello utilizaremos el comando <code
+                class="resaltado">telnet + dirección IP a.telnet 10.0.2.100</code>.
+            <br><br>
+            En el caso de que si tuvi&eacute;ra un analizador de tr&aacute;fico en la red podr&iacute;a ver en texto
+            plano la informaci&oacute;n que pasa del cliente al servidor telnet.
+            <br>
+            </p>
+        </section>
     </main>
     <footer>
         <article>
@@ -109,14 +133,17 @@
             </section>
             <section>
                 <div class="grid-container">
-                    <div class="grid-item"><a href="https://www.centrodonbosco.es/" target="_blank">Centro Don Bosco</a></div>
-                    <div class="grid-item"><a href="https://www.centrodonbosco.es/estudios/asir" target="_blank">ASIR</a></div>
+                    <div class="grid-item"><a href="https://www.centrodonbosco.es/" target="_blank">Centro Don Bosco</a>
+                    </div>
+                    <div class="grid-item"><a href="https://www.centrodonbosco.es/estudios/asir"
+                            target="_blank">ASIR</a></div>
                 </div>
-        <!--<section>
+                <!--<section>
                 <h3>Centro D</h3>
             </section>-->
             </section>
         </article>
     </footer>
 </body>
+
 </html>
